@@ -100,16 +100,20 @@ WSGI_APPLICATION = 'DjangoBlog.wsgi.application'
 
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'djangoblog',
+    #     'USER': 'root',
+    #     'PASSWORD': 'Wang0201!',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': int(
+    #         os.environ.get('DJANGO_MYSQL_PORT') or 3306),
+    #     'OPTIONS': {
+    #         'charset': 'utf8mb4'},
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangoblog',
-        'USER': 'root',
-        'PASSWORD': 'Wang0201!',
-        'HOST': '127.0.0.1',
-        'PORT': int(
-            os.environ.get('DJANGO_MYSQL_PORT') or 3306),
-        'OPTIONS': {
-            'charset': 'utf8mb4'},
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
